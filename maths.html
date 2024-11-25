@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Applied Mathematics - 3</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1c1c1c;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #28a745;
+      border-radius: 50px;
+      font-size: 24px;
+      color: white;
+      letter-spacing: 1px;
+    }
+
+    .progress-bar {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .progress {
+      height: 10px;
+      width: 100%;
+      background-color: #444;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+
+    #progress-fill {
+      height: 100%;
+      width: 0;
+      background-color: #28a745;
+    }
+
+    .videos {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .video {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #333;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .video input {
+      width: 20px;
+      height: 20px;
+    }
+
+    .video label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .thumbnail {
+      width: 120px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .title {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .title:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Applied Mathematics - 3</h1>
+
+    <div class="progress-bar">
+      <span id="progress-text">0% Completed</span>
+      <div class="progress">
+        <div id="progress-fill"></div>
+      </div>
+    </div>
+    
+    <div class="videos">
+      <div class="video">
+        <input type="checkbox" class="video-checkbox" id="video1">
+        <label for="video1">
+          <img class="thumbnail" src="https://img.youtube.com/vi/BowKRml63Ww/0.jpg" alt="Thumbnail">
+          <a class="title" href="https://www.youtube.com/watch?v=BowKRml63Ww" target="_blank">Partial Differentiation Engineering Mathematics One Shot</a>
+        </label>
+      </div>
+      <div class="video">
+        <input type="checkbox" class="video-checkbox" id="video2">
+        <label for="video2">
+          <img class="thumbnail" src="https://img.youtube.com/vi/Sb6qrdMPRPE/0.jpg" alt="Thumbnail">
+          <a class="title" href="https://www.youtube.com/watch?v=Sb6qrdMPRPE" target="_blank">Fourier Series Engineering Mathematics</a>
+        </label>
+      </div>
+      <div class="video">
+        <input type="checkbox" class="video-checkbox" id="video3">
+        <label for="video3">
+          <img class="thumbnail" src="https://img.youtube.com/vi/kWRLInwDckU/0.jpg" alt="Thumbnail">
+          <a class="title" href="https://www.youtube.com/watch?v=kWRLInwDckU" target="_blank">Fourier Transform Engineering Mathematics 3 One Shot</a>
+        </label>
+      </div>
+      <div class="video">
+        <input type="checkbox" class="video-checkbox" id="video4">
+        <label for="video4">
+          <img class="thumbnail" src="https://img.youtube.com/vi/NqeUG8FEvCo/0.jpg" alt="Thumbnail">
+          <a class="title" href="https://www.youtube.com/watch?v=NqeUG8FEvCo" target="_blank">Laplace Transform Engineering Mathematics 3 One Shot</a>
+        </label>
+      </div>
+      <div class="video">
+        <input type="checkbox" class="video-checkbox" id="video5">
+        <label for="video5">
+          <img class="thumbnail" src="https://img.youtube.com/vi/knZrhVkZ71Q/0.jpg" alt="Thumbnail">
+          <a class="title" href="https://www.youtube.com/watch?v=knZrhVkZ71Q" target="_blank">Complete Laplace Transform Engineering Mathematics</a>
+        </label>
+      </div>
+<div class="footer" style="text-align: center;">
+    Developed by <a href="https://www.linkedin.com/in/nikhilcse/" target="_blank" style="color: #28a745; text-decoration: none; font-weight: bold; font-size: 20px;">Nikhil Kumawat</a>
+    <a href="https://github.com/Nikhil-kumawat" target="_blank" style="margin-left: 15px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" style="width: 30px; vertical-align: middle;">
+    </a>
+    &nbsp;|&nbsp;
+    <a href="https://www.linkedin.com/in/dev-arijit-82a462293/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color: #28a745; text-decoration: none; font-weight: bold; font-size: 18px;">Dev Arijit Nandy</a>
+</div>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const checkboxes = document.querySelectorAll('.video-checkbox');
+      const progressText = document.getElementById('progress-text');
+      const progressFill = document.getElementById('progress-fill');
+
+      const updateProgress = () => {
+        const totalVideos = checkboxes.length;
+        const completedVideos = Array.from(checkboxes).filter(cb => cb.checked).length;
+        const percentage = Math.round((completedVideos / totalVideos) * 100);
+
+        progressText.textContent = `${percentage}% Completed`;
+        progressFill.style.width = `${percentage}%`;
+      };
+
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', (event) => {
+          const parentVideoBox = event.target.closest('.video');
+          if (checkbox.checked) {
+            parentVideoBox.style.backgroundColor = '#28a745'; // Green color
+          } else {
+            parentVideoBox.style.backgroundColor = '#333'; // Original background color
+          }
+          updateProgress();
+        });
+      });
+
+      updateProgress();
+    });
+  </script>
+</body>
+</html>

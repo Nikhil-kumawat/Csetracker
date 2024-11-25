@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects Overview</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .hero {
+            width: 90%;
+            max-width: 1200px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .hero .card h3 {
+            font-size: 60px; /* Increased size for the "Subjects" heading */
+            margin: 0 0 10px;
+            text-align: center; /* Centering the heading */
+        }
+
+        .hero .card p {
+            font-size: 20px; /* Increased size for the "Select a subject" text */
+            margin: 0;
+            text-align: center; /* Centering the text */
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .card {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: left;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .footer span {
+            color: #ff4d4d;
+            font-weight: bold;
+        }
+
+        /* Add style for the links */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Adding hover effect for cards */
+        .card:hover {
+            background-color: #333;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="card">
+            <h3>Subjects</h3>
+            <p>Select a subject to get started</p> <!-- Centered the text here -->
+        </div>
+    </div>
+    <div class="container">
+        <a href="operatingsystem.html">
+            <div class="card">
+                <div class="icon">🐧</div>
+                <h3>Operating System with Unix</h3>
+                <p>This subject covers the concepts of operating systems with a focus on Unix-based systems.</p>
+            </div>
+        </a>
+        
+        <a href="websitedesign.html">
+            <div class="card">
+                <div class="icon">🌐</div>
+                <h3>Website Design</h3>
+                <p>This subject covers the principles and techniques of designing functional and aesthetically pleasing websites.</p>
+            </div>
+        </a>
+        
+        <!-- Object-Oriented Programming card with link to oops.html -->
+        <a href="oops.html">
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Object-Oriented Programming using C++</h3>
+                <p>This subject teaches the concepts of object-oriented programming using C++ as the programming language.</p>
+            </div>
+        </a>
+
+        <a href="dbms.html">
+            <div class="card">
+                <div class="icon">💾</div>
+                <h3>Database Management Systems</h3>
+                <p>This subject covers the management, design, and implementation of databases for efficient data storage and retrieval.</p>
+            </div>
+        </a>
+
+        <a href="maths.html">
+            <div class="card">
+                <div class="icon">🔢</div>
+                <h3>Applied Mathematics - 3</h3>
+                <p>This subject focuses on the application of advanced mathematical concepts to real-world problems.</p>
+            </div>
+        </a>
+
+        <div class="card">
+            <div class="icon">🧠</div>
+            <h3>Behavioral Science</h3>
+            <p>This subject explores the study of human behavior, cognition, and emotions in a social context.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🗣</div>
+            <h3>Communication Skills</h3>
+            <p>This subject focuses on developing effective verbal and written communication skills in various professional contexts.</p>
+        </div>
+
+        <a href="language.html">
+            <div class="card">
+                <div class="icon">🌍</div>
+                <h3>Foreign Language</h3>
+                <p>This subject involves learning a new language, improving communication skills and cultural understanding.</p>
+            </div>
+        </a>
+
+        <div class="card">
+            <div class="icon">🎓</div>
+            <h3>Minor Track</h3>
+            <p>This subject provides a specialized study path in an area outside the major field of study, expanding knowledge and skills.</p>
+        </div>
+    </div>
+    <div class="footer">
+        Developed by <a href="https://www.linkedin.com/in/nikhilcse/" target="_blank" style="color: #28a745; text-decoration: none; font-weight: bold; font-size: 20px;">Nikhil Kumawat</a>
+        <a href="https://github.com/Nikhil-kumawat" target="_blank" style="margin-left: 15px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" style="width: 30px; vertical-align: middle;">
+        </a>
+        &nbsp;|&nbsp;
+        <a href="https://www.linkedin.com/in/dev-arijit-82a462293/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color: #28a745; text-decoration: none; font-weight: bold; font-size: 18px;">Dev Arijit Nandy</a>
+    </div>
+</body>
+</html>
+

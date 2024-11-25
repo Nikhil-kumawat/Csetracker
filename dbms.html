@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1c1c1c;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #28a745;
+      border-radius: 50px;
+      font-size: 24px;
+      color: white;
+      letter-spacing: 1px;
+    }
+
+    .progress-bar {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .progress {
+      height: 10px;
+      width: 100%;
+      background-color: #444;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+
+    #progress-fill {
+      height: 100%;
+      width: 0;
+      background-color: #28a745;
+    }
+
+    .videos {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .video {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #333;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .video input {
+      width: 20px;
+      height: 20px;
+    }
+
+    .video label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .thumbnail {
+      width: 120px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .title {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .title:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Rectangular cylindrical block for the heading -->
+    <h1>Database Management Systems</h1>
+
+    <div class="progress-bar">
+      <span id="progress-text">0% Completed</span>
+      <div class="progress">
+        <div id="progress-fill"></div>
+      </div>
+    </div>
+    
+    <div class="video">
+  <input type="checkbox" class="video-checkbox" id="video1">
+  <label for="video1">
+    <img class="thumbnail" src="https://img.youtube.com/vi/eYpXCdvKwEQ/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=eYpXCdvKwEQ" target="_blank">Introduction to DBMS Placements Course 2022</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video2">
+  <label for="video2">
+    <img class="thumbnail" src="https://img.youtube.com/vi/TYo_CUnIWP8/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=TYo_CUnIWP8" target="_blank">Lecture 1: What the heck is Database Management System (DBMS)?</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video3">
+  <label for="video3">
+    <img class="thumbnail" src="https://img.youtube.com/vi/mYI2nopkQJE/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=mYI2nopkQJE" target="_blank">Lecture 2: DBMS Architecture || Role of DBA</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video4">
+  <label for="video4">
+    <img class="thumbnail" src="https://img.youtube.com/vi/kMHJhhIx5k4/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=kMHJhhIx5k4" target="_blank">Lecture 3: ER Model Explained || ER Diagram Notations || DBMS for Placements</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video5">
+  <label for="video5">
+    <img class="thumbnail" src="https://img.youtube.com/vi/8_dMPX6_qiY/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=8_dMPX6_qiY" target="_blank">Lecture 4: Extended ER Features || Abstraction in ER Model</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video6">
+  <label for="video6">
+    <img class="thumbnail" src="https://img.youtube.com/vi/w-VfTUvxETQ/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=w-VfTUvxETQ" target="_blank">Lecture 5: How to think and formulate an ER Diagram || Banking System ER Model</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video7">
+  <label for="video7">
+    <img class="thumbnail" src="https://img.youtube.com/vi/sQ1AcVYP18c/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=sQ1AcVYP18c" target="_blank">Lecture 6: Designing the ER Model of FACEBOOK Database || DBMS for Placements</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video8">
+  <label for="video8">
+    <img class="thumbnail" src="https://img.youtube.com/vi/kUk8PgORTzo/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=kUk8PgORTzo" target="_blank">Lecture 7: Relational Model Explained || DBMS for Placements</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video9">
+  <label for="video9">
+    <img class="thumbnail" src="https://img.youtube.com/vi/_xHl2gpoXqI/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=_xHl2gpoXqI" target="_blank">Lecture 8: Transform ER Model to Relational Model || ER-Diagram to Tables</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video10">
+  <label for="video10">
+    <img class="thumbnail" src="https://img.youtube.com/vi/D_wNQR3LeeM/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=D_wNQR3LeeM" target="_blank">Lecture 9: Complete SQL in 1 VIDEO</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video11">
+  <label for="video11">
+    <img class="thumbnail" src="https://img.youtube.com/vi/vIq9zkpGWc8/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=vIq9zkpGWc8" target="_blank">Lecture 10: Common SQL Queries for Interviews</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video12">
+  <label for="video12">
+    <img class="thumbnail" src="https://img.youtube.com/vi/nweGaymEwGM/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=nweGaymEwGM" target="_blank">Lecture 11: Why We Need Normalisation ? || DBMS Series for Placements</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video13">
+  <label for="video13">
+    <img class="thumbnail" src="https://img.youtube.com/vi/sS4gadQw5iM/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=sS4gadQw5iM" target="_blank">Lecture 12: ACID Properties && Transactions in DBMS</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video14">
+  <label for="video14">
+    <img class="thumbnail" src="https://img.youtube.com/vi/iNAaZNC7prE/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=iNAaZNC7prE" target="_blank">Lecture 13: How to Implement Atomicity and Durability? || DBMS Interview question</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video15">
+  <label for="video15">
+    <img class="thumbnail" src="https://img.youtube.com/vi/Fr-0rNhIECw/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=Fr-0rNhIECw" target="_blank">Lecture 14: Why Indexing is important in Database Systems || DBMS Interview question</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video16">
+  <label for="video16">
+    <img class="thumbnail" src="https://img.youtube.com/vi/hl65apHxp64/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=hl65apHxp64" target="_blank">Lecture 15: What are NoSQL Databases || SQL vs NoSQL</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video17">
+  <label for="video17">
+    <img class="thumbnail" src="https://img.youtube.com/vi/ItjrKq7c-h4/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=ItjrKq7c-h4" target="_blank">Lecture 16: Types of Databases || DBMS for Placements</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video18">
+  <label for="video18">
+    <img class="thumbnail" src="https://img.youtube.com/vi/Xt3HWe8W67Q/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=Xt3HWe8W67Q" target="_blank">Lecture 17: What is Clustering / Replication in DBMS || DBMS for Placements</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video19">
+  <label for="video19">
+    <img class="thumbnail" src="https://img.youtube.com/vi/TlIX427wKDg/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=TlIX427wKDg" target="_blank">Lecture 18: What is Partitioning and Sharding in DBMS || DB Optimisation</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video20">
+  <label for="video20">
+    <img class="thumbnail" src="https://img.youtube.com/vi/SOrhyETsz6w/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=SOrhyETsz6w" target="_blank">Lecture 19: Database Scaling Patterns | How to perform step by step scaling</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video21">
+  <label for="video21">
+    <img class="thumbnail" src="https://img.youtube.com/vi/EIl02n-FxTg/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=EIl02n-FxTg" target="_blank">Lecture 20: CAP Theorem in DBMS || DBMS for Placements 2022</a>
+  </label>
+</div>
+<div class="video">
+  <input type="checkbox" class="video-checkbox" id="video22">
+  <label for="video22">
+    <img class="thumbnail" src="https://img.youtube.com/vi/_RS78xr2Dc4/0.jpg" alt="Thumbnail">
+    <a class="title" href="https://www.youtube.com/watch?v=_RS78xr2Dc4" target="_blank">Last Lecture: Master-Slave Architecture || DBMS for Placements</a>
+  </label>
+</div>
+
+      <!-- Video Blocks End -->
+    </div>
+  </div>
+
+  <script>
+    const checkboxes = document.querySelectorAll('.video-checkbox');
+    const progressFill = document.getElementById('progress-fill');
+    const progressText = document.getElementById('progress-text');
+
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', updateProgress);
+    });
+
+    function updateProgress() {
+      const totalVideos = checkboxes.length;
+      const completedVideos = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
+      const progress = (completedVideos / totalVideos) * 100;
+
+      progressFill.style.width = `${progress}%`;
+      progressText.textContent = `${Math.round(progress)}% Completed`;
+    }
+  </script>
+</body>
+</html>

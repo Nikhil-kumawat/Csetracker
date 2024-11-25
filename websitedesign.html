@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Design</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1c1c1c;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #28a745;
+      border-radius: 50px;
+      font-size: 24px;
+      color: white;
+      letter-spacing: 1px;
+    }
+
+    .videos {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .video {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #333;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .video img {
+      width: 120px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .video a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .video a:hover {
+      text-decoration: underline;
+    }
+
+    .video input[type="checkbox"] {
+      transform: scale(1.5);
+      margin-right: 10px;
+    }
+
+    .progress-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: #555;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .progress {
+      height: 20px;
+      background-color: #28a745;
+      width: 0%;
+      transition: width 0.3s;
+    }
+
+    .progress-text {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Website Design</h1>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="progress-text" id="progress-text">0% Completed</div>
+    </div>
+
+    <!-- Video List -->
+    <div class="videos" id="video-list">
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/HcOc7P5BMi4/0.jpg" alt="HTML Tutorial Thumbnail">
+        <a href="https://www.youtube.com/watch?v=HcOc7P5BMi4" target="_blank">HTML Tutorial for Beginners | Complete HTML with Notes & Code</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/ESnrn1kAD4E/0.jpg" alt="CSS Tutorial Thumbnail">
+        <a href="https://www.youtube.com/watch?v=ESnrn1kAD4E" target="_blank">CSS Tutorial for Beginners | Complete CSS with Project, Notes & Code</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/nGhKIC_7Mkk/0.jpg" alt="Amazon Clone Thumbnail">
+        <a href="https://www.youtube.com/watch?v=nGhKIC_7Mkk" target="_blank">Building AMAZON Clone for Beginners | Project using HTML & CSS</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/Ez8F0nW6S-w/0.jpg" alt="Git and GitHub Thumbnail">
+        <a href="https://www.youtube.com/watch?v=Ez8F0nW6S-w" target="_blank">Complete Git and GitHub Tutorial for Beginners</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/ajdRvxDWH4w/0.jpg" alt="JavaScript Variables Thumbnail">
+        <a href="https://www.youtube.com/watch?v=ajdRvxDWH4w" target="_blank">JavaScript Full Course ❤️ | Variables & Data Types | Lecture 1</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/Zg4-uSjxosE/0.jpg" alt="JavaScript Operators Thumbnail">
+        <a href="https://www.youtube.com/watch?v=Zg4-uSjxosE" target="_blank">Lecture 2 : Operators and Conditional Statements | JavaScript Full Course</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/UmRtFFSDSFo/0.jpg" alt="JavaScript Loops Thumbnail">
+        <a href="https://www.youtube.com/watch?v=UmRtFFSDSFo" target="_blank">Lecture 3: Loops and Strings | JavaScript Full Course</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/gFWhbjzowrM/0.jpg" alt="JavaScript Arrays Thumbnail">
+        <a href="https://www.youtube.com/watch?v=gFWhbjzowrM" target="_blank">Lecture 4: Arrays | JavaScript Full Course</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/P0XMXqDGttU/0.jpg" alt="JavaScript Functions Thumbnail">
+        <a href="https://www.youtube.com/watch?v=P0XMXqDGttU" target="_blank">Lecture 5: Functions & Methods | JavaScript Full Course</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/7zcXPCt8Ck0/0.jpg" alt="JavaScript DOM Part 1 Thumbnail">
+        <a href="https://www.youtube.com/watch?v=7zcXPCt8Ck0" target="_blank">Lecture 6 : DOM - Document Object Model | JavaScript Full Course | Part 1</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/fXAGTOZ25H8/0.jpg" alt="JavaScript DOM Part 2 Thumbnail">
+        <a href="https://www.youtube.com/watch?v=fXAGTOZ25H8" target="_blank">Lecture 7 : DOM (Part 2) | Document Object Model | JavaScript Full Course</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/_i-uLJAh79U/0.jpg" alt="JavaScript Events Thumbnail">
+        <a href="https://www.youtube.com/watch?v=_i-uLJAh79U" target="_blank">Lecture 8 : Events in JavaScript | JavaScript Full Course</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/SqrppLEljkY/0.jpg" alt="Tic Tac Toe Thumbnail">
+        <a href="https://www.youtube.com/watch?v=SqrppLEljkY" target="_blank">Lecture 9 : Tic Tac Toe Game in JavaScript | JS Project | JavaScript Full Course</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/_V33HCZWLDQ/0.jpg" alt="Stone, Paper & Scissors Thumbnail">
+        <a href="https://www.youtube.com/watch?v=_V33HCZWLDQ" target="_blank">Lecture 10 : MiniProject - Stone, Paper & Scissors Game | JavaScript Full Course</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/N-O4w6PynGY/0.jpg" alt="Classes & Objects Thumbnail">
+        <a href="https://www.youtube.com/watch?v=N-O4w6PynGY" target="_blank">Lecture 11 : Classes & Objects | JavaScript Full Course</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/d3jXofmQm44/0.jpg" alt="Inheritance Thumbnail">
+        <a href="https://www.youtube.com/watch?v=d3jXofmQm44" target="_blank">Lecture 12 : Callbacks, Promises & Async Await | JavaScript Full Course</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/CyGodpqcid4/0.jpg" alt="CSS with JavaScript Thumbnail">
+        <a href="https://www.youtube.com/watch?v=CyGodpqcid4" target="_blank">Lecture 13 : Fetch API with Project | JavaScript Full Course</a>
+      </div>
+      <div class="video">
+        <input type="checkbox" onchange="updateProgress()">
+        <img src="https://img.youtube.com/vi/4WjtQjPQGIs/0.jpg" alt="LocalStorage Thumbnail">
+        <a href="https://www.youtube.com/watch?v=4WjtQjPQGIs" target="_blank">Lecture 14 : Web Development Complete RoadMap for 2025 | JavaScript Full Course</a>
+      </div>
+<div class="footer" style="text-align: center;">
+    Developed by <a href="https://www.linkedin.com/in/nikhilcse/" target="_blank" style="color: #28a745; text-decoration: none; font-weight: bold; font-size: 20px;">Nikhil Kumawat</a>
+    <a href="https://github.com/Nikhil-kumawat" target="_blank" style="margin-left: 15px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" style="width: 30px; vertical-align: middle;">
+    </a>
+    &nbsp;|&nbsp;
+    <a href="https://www.linkedin.com/in/dev-arijit-82a462293/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color: #28a745; text-decoration: none; font-weight: bold; font-size: 18px;">Dev Arijit Nandy</a>
+</div>
+
+    </div>
+  </div>
+
+  <script>
+    function updateProgress() {
+      const checkboxes = document.querySelectorAll('.videos input[type="checkbox"]');
+      const total = checkboxes.length;
+      const checked = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
+      const progress = Math.round((checked / total) * 100);
+
+      document.getElementById('progress').style.width = progress + '%';
+      document.getElementById('progress-text').textContent = `${progress}% Completed`;
+    }
+  </script>
+</body>
+</html>
+
